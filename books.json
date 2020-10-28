@@ -1,0 +1,27 @@
+[
+
+    {
+      "id": 1,
+      "name": "Johns-Jenkins",
+      "writers":["Writer1","Writer2"],
+      "copies_available": 20
+    },
+    {
+      "id": 2,
+      "name": "Johns-second",
+      "writers":["Writer21","Writer22"],
+      "copies_available": 10
+    },
+    {
+      "id": 3,
+      "name": "Johns-third",
+      "writers":["Writer31","Writer32"],
+      "copies_available": 15
+    },
+    {
+      "id": 4,
+      "name": "Johns-fourth",
+      "writers":["Writer21","Writer22"],
+      "copies_available": 25
+    }
+  ]

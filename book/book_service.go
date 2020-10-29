@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/KiranGosavi/gopractice/cors"
+	"golang.org/x/net/websocket"
 	"log"
 	"net/http"
 	"strconv"
@@ -15,6 +16,7 @@ func SetupRoutes(basePath string)  {
 	fmt.Println(basePath)
 	singleBookHandler :=http.HandlerFunc(singleBookHandler)
 	booksHandler :=http.HandlerFunc(allBooksHandler)
+	http.Handle("/websocket",websocket.Handler(socketHandler))
 	http.Handle("/api/books", cors.MiddlewareHandler(booksHandler))
 	http.Handle("/api/books/", cors.MiddlewareHandler(singleBookHandler))
 
